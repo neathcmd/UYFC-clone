@@ -3,7 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UYFC</title>
+    <title>UYFC clone</title>
+    <!-- Add Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- output -->
+    <link rel="stylesheet" href="./src/styles/output.css" />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom animation CSS -->
+    <link rel="stylesheet" href="./src/styles/animation.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- appcss -->
+    <link rel="stylesheet" href="./src/styles/app.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <nav
+        class="flex items-center justify-between p-[2em] max-w-screen-xl mx-auto shadow-lg"
+      >
+        <div class="logo">
+          <img src="logo.png" alt="Logo" />
+        </div>
+        <ul class="flex items-center space-x-6">
+          <li><a href="#">icon</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Program</a></li>
+          <li><a href="#">Gallary</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <!-- hero section -->
+      <section class="bg-url('hero.jpg') bg-no-repeat bg-cover bg-center">
+        <div class="hero">
+          <div class="img">
+            <div class="image-1">
+              <img src="" alt="" />
+            </div>
+            <div class="image-2">
+              <img src="" alt="" />
+            </div>
+            <div class="image-3">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="image-4">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <!-- About Us Section -->
+      <section class="py-12">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 data-aos="fade-down" class="text-3xl font-bold">About Us</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Mission -->
+            <div
+              data-aos="fade-up"
+              class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow"
+              onclick="showContent('mission')"
+            >
+              <h3 class="text-xl font-semibold mb-4">Mission</h3>
+              <div id="missionContent" class="hidden mt-4">
+                <p>
+                  To achieve all these multi tasks, the UTFG is in addition to:
+                </p>
+                <ul class="list-disc list-inside mt-2">
+                  <li>Providing excellent training and education.</li>
+                  <li>
+                    Promoting education on healthcare and healthcare service
+                    delivery.
+                  </li>
+                  <li>
+                    Maintaining security, safety, justice, and the environment.
+                  </li>
+                  <li>Exonerating the development in the future.</li>
+                  <li>The resilience of...</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Vision -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow"
+              onclick="showContent('vision')"
+            >
+              <h3 class="text-xl font-semibold mb-4">Vision</h3>
+              <div id="visionContent" class="hidden mt-4">
+                <p>
+                  Our vision is to create a better future through innovation and
+                  dedication.
+                </p>
+              </div>
+            </div>
+
+            <!-- About Us -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow"
+              onclick="showContent('about')"
+            >
+              <h3 class="text-xl font-semibold mb-4">About Us</h3>
+              <div id="aboutContent" class="hidden mt-4">
+                <p>
+                  We are a team of professionals committed to excellence and
+                  growth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./src/script/aos.js"></script>
+
+    <!-- app.js -->
+    <script src="./src/script/app.js"></script>
+  </body>
 </html>
